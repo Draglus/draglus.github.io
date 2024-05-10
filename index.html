@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Search App</title>
+    <!-- Dash CSS and JS -->
+    <link rel="stylesheet" href="https://codepen.io/chriddyp/pen/bWLwgP.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dash/1.21.0/dash.min.js"></script>
+</head>
+<body>
+    <div class="container" style="width: 90%; max-width: 1000px; margin: auto; padding: 20px; background-image: url('https://source.unsplash.com/featured/?landscape'); border-radius: 10px;">
+        <div style="margin-bottom: 20px; padding: 20px; background-color: #f9f9f9; border-radius: 10px;">
+            <label style="font-weight: bold;">Enter search word(s):</label>
+            <input id="search_word" type="text" value="" style="margin-left: 10px;">
+            <div id="search_result" style="overflow-y: scroll; max-height: 200px; margin-top: 10px;"></div>
+        </div>
+
+        <div style="margin-bottom: 20px; padding: 20px; background-color: #f9f9f9; border-radius: 10px;">
+            <label style="font-weight: bold;">Enter description of yourself:</label>
+            <input id="Description_Sentence" type="text" value="" style="margin-left: 10px;">
+            <button id="Description_button" style="margin-left: 10px; background-color: #4CAF50; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 5px;">Send in</button>
+        </div>
+
+        <div id="Description_result" style="overflow-y: scroll; max-height: 200px; margin-top: 10px; padding: 20px; background-color: #f9f9f9; border-radius: 10px;"></div>
+
+        <div style="padding: 20px; background-color: #f9f9f9; border-radius: 10px;">
+            <label style="font-weight: bold;">Choose location:</label>
+            <select id="region-dropdown" style="width: 300px; margin-left: 10px; margin-top: 10px;">
+                <option value=""></option>
+                <option value="storkoebenhavn">Storkøbenhavn</option>
+                <option value="nordsjaelland">Nordsjælland</option>
+                <option value="region-sjaelland">Region Sjælland</option>
+                <option value="fyn">Fyn</option>
+                <option value="region-nordjylland">Region Nordjylland</option>
+                <option value="region-midjylland">Region Midjylland</option>
+                <option value="sydjylland">Sydjylland</option>
+                <option value="bornholm">Bornholm</option>
+                <option value="skaane">Skåne</option>
+                <option value="groenland">Grønland</option>
+                <option value="faeroeerne">Færøerne</option>
+                <option value="udlandet">Udlandet</option>
+                <option value="danmark">Danmark</option>
+            </select>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle dropdown change event
+        document.getElementById('region-dropdown').addEventListener('change', function() {
+            var selectedValue = this.value;
+            // Perform actions based on selected value if needed
+            console.log('Selected value:', selectedValue);
+        });
+    </script>
+</body>
+</html>
